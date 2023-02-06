@@ -8,13 +8,13 @@
 
 Our idea is build a telegram bot for community management, it has 3 functionalities:
 
-1. Missions: User can **EASILY** take missions for rewards. Project owner can **EASILY** gather user's information without checking messy data.
+1. **Missions**: User can **EASILY** take missions for rewards. Project owner can **EASILY** gather user's information without checking messy data.
 <img src="https://i.imgur.com/sprN28x.jpg" width="354" height="766">
 
-2. Rewards: User can gether rewards without fee
+2. **Rewards**: User can gether rewards without fee
 <img src="https://i.imgur.com/EI5ci36.jpg" width="354" height="766">
 
-3. Invitation: User can **EASILY** invite friends to join mission
+3. **Invitation**: User can **EASILY** invite friends to join mission
 <img src="https://i.imgur.com/ACkr6QO.jpg" width="354" height="766">
 
 ## Technical Stacks
