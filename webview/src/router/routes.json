@@ -1,0 +1,30 @@
+[
+	{
+		"path": "",
+		"element": "layout/Basic",
+		"redirect": "/home",
+		"children": [
+			{
+				"title": "title.home",
+				"icon": "info",
+				"path": "home",
+				"element": "pages/Home",
+				"order": 1,
+				"hiddenNavigation": true,
+				"hiddenBreadcrumb": false
+			},
+			{
+				"title": "rewards",
+				"icon": "info",
+				"path": "rewards",
+				"element": "pages/Rewards"
+			},
+			{
+				"title": "mission",
+				"icon": "info",
+				"path": "mission",
+				"element": "pages/Mission"
+			}
+		]
+	}
+]

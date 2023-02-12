@@ -1,0 +1,42 @@
+{
+	"themeName": "exampleTheme",
+	"languages": {
+		"en_us": {
+			"locale": "en_us",
+			"label": "English",
+			"id": 0,
+			"keys": "en|en_us|en_US|en-us|en-US"
+		},
+		"zh_tw": {
+			"locale": "zh_tw",
+			"label": "繁體中文",
+			"id": 1,
+			"keys": "tw|hant|zh_tw|zh_TW|zh-tw|zh-TW"
+		}
+	},
+	"permissionType": {
+		"filed": "select",
+		"description": "權限類型 none role acl",
+		"value": "none"
+	},
+	"enableFeatureAcl": {
+		"filed": "input",
+		"description": "是否啟動功能存取控制列表",
+		"value": false
+	},
+	"enableMetaAPI": {
+		"filed": "input",
+		"description": "是否啟動 meta api",
+		"value": false
+	},
+	"enableMaintenance": {
+		"filed": "input",
+		"description": "是否啟動 maintenance logic",
+		"value": false
+	},
+	"enableVerifyToken": {
+		"filed": "input",
+		"description": "是否驗證 token",
+		"value": false
+	}
+}

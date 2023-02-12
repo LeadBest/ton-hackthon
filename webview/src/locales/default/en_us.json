@@ -1,0 +1,27 @@
+{
+	"title": "",
+	"title.global": "Global",
+	"caption": "",
+
+	"label": "",
+
+	"default": "",
+
+	"unit": "",
+
+	"status": "",
+
+	"relation": "",
+
+	"placeholder": "",
+
+	"description": "",
+
+	"notice": "",
+
+	"action": "",
+	"action.confirm": "Confirm",
+	"action.cancel": "Cancel",
+
+	"error": ""
+}

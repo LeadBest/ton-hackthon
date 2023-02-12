@@ -1,0 +1,27 @@
+{
+	"title": "",
+
+	"caption": "",
+
+	"label": "",
+
+	"default": "",
+
+	"unit": "",
+
+	"status": "",
+
+	"relation": "",
+
+	"placeholder": "",
+
+	"description": "",
+
+	"notice": "",
+
+	"action": "",
+	"action.confirm": "確認",
+	"action.cancel": "取消",
+
+	"error": ""
+}
