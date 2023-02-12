@@ -2,20 +2,26 @@
 
 "Dobby has no master! Dobby is a free elf, and Dobby has come to save Harry Potter and his friends!"
 
-<img src="https://s7g8.scene7.com/is/image/BradfordUK/0302984001_alt1?wid=700&hei=700&fmt=pjpeg&qlt=85,0" width="300" height="300">
+<img src="https://upload.cc/i1/2023/02/12/Z0pwKx.png" width="600">
 
 ## Idea
 
 Our idea is build a telegram bot for community management, it has 3 functionalities:
 
 1. **Missions**: User can **EASILY** take missions for rewards. Project owner can **EASILY** gather user's information without checking messy data.
-<img src="https://i.imgur.com/sprN28x.jpg" width="354" height="766">
 
-2. **Rewards**: User can gether rewards without fee
-<img src="https://i.imgur.com/EI5ci36.jpg" width="354" height="766">
+    <img src="https://upload.cc/i1/2023/02/12/fnq4Ih.png" width="280">
+    
 
-3. **Invitation**: User can **EASILY** invite friends to join mission
-<img src="https://i.imgur.com/ACkr6QO.jpg" width="354" height="766">
+2. **Rewards**: User can gather rewards without fee
+
+    <img src="https://upload.cc/i1/2023/02/12/hdJ6cn.png" width="280">
+    
+    
+
+3. **NFT Store**: User can **EASILY** buy NFTs through dialogue interaction
+
+    <img src="https://upload.cc/i1/2023/02/12/rcFKYx.png" width="280">
 
 ## Technical Stacks
 
