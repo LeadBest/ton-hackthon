@@ -1,6 +1,12 @@
 /** @format */
 import { defineConfig, loadEnv } from 'vite';
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
+import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
+import rollupNodePolyFill  from 'rollup-plugin-node-polyfills';
+// import { nodePolyfills } from "vite-plugin-node-polyfills";
+// import nodePolyfills from 'vite-plugin-node-stdlib-browser'
+import basicSsl from '@vitejs/plugin-basic-ssl';
+import checker from 'vite-plugin-checker';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import mkcert from 'vite-plugin-mkcert';
@@ -30,31 +36,40 @@ export default ({ mode }) => {
 			},
 		},
 		resolve: {
-			alias: [
-				{
-					find: /\@\//,
-					replacement: path.join(__dirname, './src/'),
-				},
-			]
+			alias: {
+				"@": path.join(__dirname, './src/'),
+				buffer: 'rollup-plugin-node-polyfills/polyfills/buffer-es6',
+				process: 'rollup-plugin-node-polyfills/polyfills/process-es6'
+			}
 		},
 		plugins: [
+			basicSsl(),
 			timeReporter(), 
 			dynamicImport(), 
 			react(), 
-			mkcert()
+			checker({
+				typescript: true,
+			}),
+			// mkcert()
 		],
 		optimizeDeps: {
 			esbuildOptions: {
 				// Node.js global to browser globalThis
 				define: {
-						global: 'globalThis'
+					global: 'globalThis'
 				},
-				// Enable esbuild polyfill plugins
 				plugins: [
 					NodeGlobalsPolyfillPlugin({
+						process: true,
 						buffer: true
-					})
+					}),
+					NodeModulesPolyfillPlugin()
 				]
+			}
+		},
+		build: {
+			rollupOptions: {
+				plugins: [rollupNodePolyFill()]
 			}
 		}
 	});

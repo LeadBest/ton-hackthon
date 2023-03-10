@@ -1,6 +1,7 @@
 /** @format */
 
 import React, { useEffect, useCallback, useState, useMemo } from 'react';
+
 import TonConnect, {
 	isWalletInfoInjected,
 	CHAIN,
@@ -25,13 +26,13 @@ interface TonconnectContextProps {
 
 export const TonconnectContext = React.createContext<TonconnectContextProps>({} as any);
 // const manifestUrl = 'https://gist.githubusercontent.com/siandreev/75f1a2ccf2f3b4e2771f6089aeb06d7f/raw/d4986344010ec7a2d1cc8a2a9baa57de37aaccb8/gistfile1.txt';
-const manifestUrl = 'https://2ddc-36-225-33-236.jp.ngrok.io/tonconnect-manifest.json';
+const manifestUrl = 'https://app-cplk6yhpaq-de.a.run.app/tonconnect-manifest.json';
 
 const connector = new TonConnect({ manifestUrl });
 
 const TonconnectProvider = (props: Props) => {
 	const [walletsList, setWalletList] = useState<{
-		walletsList: WalletInfo[];
+		walletsList: any;
 		embeddedWallet: WalletInfoInjected | undefined;
 	}>();
 	const [universalLink, setUniversalLink] = useState('');
