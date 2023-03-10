@@ -41,4 +41,21 @@ class UserController extends Controller
 
         return new User($user);
     }
+
+    public function getClaimRecord(Request $request)
+    {
+        $tgUserId = $request->tgUserId;
+
+        $user = $this->user->findByTgUserId($tgUserId);
+
+        if (!$user) {
+            throw new NotFoundHttpException();
+        }
+
+        $res = [
+            'url' => $this->user->getClaimRecord($user->id),
+        ];
+
+        return response()->json($res);
+    }
 }

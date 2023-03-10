@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('users', 'UserController@postCreate');
 Route::get('users/{tgUserId}', 'UserController@getUser');
 Route::get('users/nfts/{tgUserId}:claim', 'TaskController@getClaimNft');
+Route::get('users/nfts/claims/{tgUserId}', 'UserController@getClaimRecord');
 
 Route::post('tasks', 'TaskController@postCreateTask');
 Route::get('tasks/users/{tgUserId}', 'TaskController@getUserAllTasks');

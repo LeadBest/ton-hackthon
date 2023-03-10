@@ -129,3 +129,13 @@ $ docker run -e PORT=80 -p 80:80 dooby-app
 ```json
 // response (status code: 204)
 ```
+
+## 6. Get user claim record url
+> [GET] https://app-cplk6yhpaq-de.a.run.app/api/users/nfts/claims/{tgUserId}
+
+```json
+// response (status code: 200)
+{
+    "url": "https://testnet.tonscan.org/nft/EQDB7zFyZ6y9EKF5c72DFw39lFQkgw1H4kdmGLYC3NvTJDZK"
+}
+```
