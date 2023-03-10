@@ -5,6 +5,14 @@ import path from 'path';
 import fs from 'fs';
 
 ff.http('TONMint', async (req: ff.Request, res: ff.Response) => {
+    function delay(ms: number): Promise<void> {
+        return new Promise<void>((resolve) =>
+          setTimeout(() => {
+            resolve()
+          }, ms)
+        )
+      }
+
     // Get to address
     const to: string = req.query.to as string;
     if (!to) {
@@ -15,10 +23,9 @@ ff.http('TONMint', async (req: ff.Request, res: ff.Response) => {
 
     // Generate token ID
     if (!fs.existsSync(configPath)) {
-        fs.writeFileSync(configPath, JSON.stringify({ id: 1 }));
+        fs.writeFileSync(configPath, JSON.stringify({ id: 0 }));
     }
-    const id = JSON.parse(fs.readFileSync(configPath).toString()).id;
-    fs.writeFileSync(configPath, JSON.stringify({ id: id + 1 }));
+    let id = JSON.parse(fs.readFileSync(configPath).toString()).id;
 
     // Connect to tonweb API
     const tonweb = new TonWeb(
@@ -58,6 +65,35 @@ ff.http('TONMint', async (req: ff.Request, res: ff.Response) => {
         res.status(401).send({ error: 'NFT Collection is not deployed' });
     }
 
+    // Make sure token ID is not minted
+    type ParseError = {
+        result: {
+            exit_code: number;
+        };
+    };
+    let condition = true;
+    while (condition) {
+        const nftItemAddress = await nftCollection.getNftItemAddressByIndex(id);
+        const nftItem = new NftItem(tonweb.provider, {
+            address: nftItemAddress,
+        });
+        try {
+            // id existed
+            const res = await nftCollection.getNftItemContent(nftItem);
+            condition = true;
+            id++;
+        } catch (e) {
+            // id is not existed
+            const parseError = e as ParseError;
+            if (parseError && parseError.result && parseError.result.exit_code === -13) {
+                condition = false;
+            }
+        }
+        await delay(500);
+    }
+    fs.writeFileSync(configPath, JSON.stringify({ id }));
+    await delay(500);
+
     // Gather NFT metadata
     const tokenId = id;
     const ownerAddress = to;
@@ -68,27 +104,28 @@ ff.http('TONMint', async (req: ff.Request, res: ff.Response) => {
             )
         ).json()
     ).result.seqno;
-    const nftItemAddress = await nftCollection.getNftItemAddressByIndex(tokenId);
+    const nftItemAddress = await nftCollection.getNftItemAddressByIndex(id);
     const amount = TonWeb.utils.toNano('0.05');
 
     // Deploy NFT Item
     if (nftCollection.address !== undefined) {
         await wallet.methods
-        .transfer({
-            secretKey: walletKey.secretKey,
-            toAddress: nftCollection.address,
-            amount,
-            seqno,
-            payload: await nftCollection.createMintBody({
+            .transfer({
+                secretKey: walletKey.secretKey,
+                toAddress: nftCollection.address,
                 amount,
-                itemIndex: tokenId,
-                itemOwnerAddress: new TonWeb.utils.Address(ownerAddress),
-                itemContentUri: `${tokenId}.json`,
-            }),
-            sendMode: 3,
-        })
-        .send();
+                seqno,
+                payload: await nftCollection.createMintBody({
+                    amount,
+                    itemIndex: tokenId,
+                    itemOwnerAddress: new TonWeb.utils.Address(ownerAddress),
+                    itemContentUri: `${tokenId}.json`,
+                }),
+                sendMode: 3,
+            })
+            .send();
     }
+    await delay(500);
 
     res.status(200).send({ tokenId: id, tokenAddress: nftItemAddress.toString(true, true, true), error: '' });
 });
