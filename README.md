@@ -1,6 +1,6 @@
-# Leadbest Consulting Group - TON Dobby
+# Leadbest Consulting Group - TON Dooby
 
-"Dobby has no master! Dobby is a free elf, and Dobby has come to save Harry Potter and his friends!"
+"Dooby has no master! Dooby is a free elf, and Dooby has come to save Harry Potter and his friends!"
 
 <img src="https://upload.cc/i1/2023/02/12/Z0pwKx.png" width="600">
 
