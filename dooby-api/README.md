@@ -1,14 +1,14 @@
 # Overview
-- Deploy service to GCP Cloud Run
-- DB is on GCP Cloud SQL (postgresql)
+- Service is deployed to GCP Cloud Run
+- DB is on GCP Cloud SQL (PostgreSQL)
 
 # Steps to run at local
 ```shell
 # 1. build image
-$ docker build -t asia-east1-docker.pkg.dev/my-lab-328803/dooby-app/app .
+$ docker build -t dooby-app .
 
 # 2. test at local
-$ docker run -e PORT=80 -p 80:80 asia-east1-docker.pkg.dev/my-lab-328803/dooby-app/app
+$ docker run -e PORT=80 -p 80:80 dooby-app
 ```
 
 # APIs
