@@ -62,12 +62,16 @@ npm run start
 ### 5. Put appScript into Google appScipt endpoint
 1. Create 4 new project in google appScript
 2. Paste the 4 `.gs` files individually into each project
-#### Reference
-[Google Apps Script](https://developers.google.com/apps-script)
-[Google appScript Console](https://script.google.com/home/start)
+    #### appScript Reference
+
+    [Google Apps Script](https://developers.google.com/apps-script)
+
+    [Google appScript Console](https://script.google.com/home/start)
 
 ## Reference
 
 [Idea Agenda](https://docs.google.com/presentation/d/1QEUo_2glJO5DsWRdGZ5p6H0i_8olk6lu865NMJp1fm0/edit#slide=id.g2052594a4f0_2_63)
+
 [Demo Slide](https://pse.is/4ptg7e)
+
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40TonDobby)](https://twitter.com/TonDooby)
