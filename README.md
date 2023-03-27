@@ -200,8 +200,6 @@ npm run start
 
 ## Reference
 
-[Idea Agenda](https://docs.google.com/presentation/d/1QEUo_2glJO5DsWRdGZ5p6H0i_8olk6lu865NMJp1fm0/edit#slide=id.g2052594a4f0_2_63)
-
 [Demo Slide](https://pse.is/4ptg7e)
 
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40TonDobby)](https://twitter.com/TonDooby)
