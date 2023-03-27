@@ -19,6 +19,7 @@ const Home = () => {
 	const searchParams = new URLSearchParams(location.search);
 	const tgUserId = searchParams.get('tgUserId');
 	const { data: userData, isFetching, isSuccess } = usersApi.useGetUserQuery(tgUserId || '');
+	const { data: claimsData } = usersApi.useGetClaimsQuery(tgUserId || '');
 
 	return (
 		<Box>
@@ -42,10 +43,12 @@ const Home = () => {
 				<Stack direction="column" spacing={4}>
 					<TonConnectWallet />
 					<Button
+						disabled={!claimsData?.url}
 						target="_self"
-						href="https://testnet.tonscan.org/nft/EQAdnpjV9j7SjZk6kHVXxXFpnjDsuAhULZxt2os3AaAzKnBH"
+						href={claimsData?.url || "https://testnet.tonscan.org/nft/EQAdnpjV9j7SjZk6kHVXxXFpnjDsuAhULZxt2os3AaAzKnBH"}
 						variant="contained"
-						fullWidth /* onClick={() => navigate('/rewards')} */
+						fullWidth 
+						// onClick={() => navigate({pathname: `/rewards`, search: searchParams.toString()})}
 					>
 						MY REWARDS
 					</Button>

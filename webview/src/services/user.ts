@@ -16,6 +16,10 @@ export interface CreateUserRequest {
 	tonAddress: string;
 }
 
+export interface ClaimsResponse {
+	url: string;
+}
+
 export const usersApi = api.injectEndpoints({
 	endpoints: builder => ({
 		createUser: builder.mutation<UserInfoResponse, CreateUserRequest>({
@@ -28,6 +32,9 @@ export const usersApi = api.injectEndpoints({
 		getUser: builder.query<UserInfoResponse, string>({
 			query: tgUserId => prefixProxyEndpoint(`/api/users/${tgUserId}`),
 		}),
+		getClaims: builder.query<ClaimsResponse,string>({
+			query: tgUserId => prefixProxyEndpoint(`/api/users/nfts/claims/${tgUserId}`),
+		})
 	}),
 	overrideExisting: false,
 });
@@ -41,6 +48,9 @@ usersApi.enhanceEndpoints({
 		createUser: {
 			invalidatesTags: ['Users'],
 		},
+		getClaims: {
+			providesTags: ['Users'],
+		}
 	},
 });
 
