@@ -1,6 +1,8 @@
 # Overview
 - Service is deployed to GCP Cloud Run
 - DB is on GCP Cloud SQL (PostgreSQL)
+- CI/CD is handled by GCP Cloud Build
+    - Replace the environment variables in `dooby-api/cloudbuild.yaml` with your own values.
 
 # Steps to run at local
 ```shell

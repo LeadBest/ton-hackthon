@@ -29,6 +29,9 @@ Our idea is build a telegram bot for community management, it has 3 functionalit
 2. ton-connect: Used to gather user's information
 3. telegram robot: Used to interact with users
 
+# API Documentation
+- [Link to documentation](https://github.com/LeadBest/ton-hackthon/blob/master/dooby-api/README.md)
+
 ## Reference
 
 [Idea Agenda](https://docs.google.com/presentation/d/1QEUo_2glJO5DsWRdGZ5p6H0i_8olk6lu865NMJp1fm0/edit#slide=id.g2052594a4f0_2_63)

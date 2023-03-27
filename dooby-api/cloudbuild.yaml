@@ -1,0 +1,25 @@
+steps:
+    # Build the container image
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['build', '-t', 'asia-east1-docker.pkg.dev/my-lab-328803/dooby-app/app', '.']
+    # Push the container image to Container Registry
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['push', 'asia-east1-docker.pkg.dev/my-lab-328803/dooby-app/app']
+    # Deploy container image to Cloud Run
+    - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+      entrypoint: gcloud
+      args:
+          [
+              'run',
+              'deploy',
+              'app',
+              '--image',
+              'asia-east1-docker.pkg.dev/my-lab-328803/dooby-app/app',
+              '--region',
+              'asia-east1',
+              '--set-env-vars',
+              'APP_NAME=Dooby,APP_ENV=production,APP_KEY=,APP_DEBUG=true,DB_CONNECTION=pgsql,DB_HOST=,DB_PORT=5432,DB_DATABASE=ton,DB_USERNAME=dobby-app-db,DB_PASSWORD=,TELEGRAM_BOT_TOKEN=,TELEGRAM_DOBBY_ROOM=',
+          ]
+images:
+    - 'asia-east1-docker.pkg.dev/my-lab-328803/dooby-app/app'
+timeout: '800s'
