@@ -1,5 +1,5 @@
 /** @format */
-
+import * as React from 'react';
 import { Box, Button, Stack, Card, CardActionArea, Icon } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { tasksApi, type TaskItem } from '@/services/mission';
@@ -45,16 +45,17 @@ const Mission = () => {
 
 	const { data: tasksData, isFetching, isSuccess } = tasksApi.useGetTasksQuery(tgUserId);
 
-	console.log(tasksData);
+
 	return (
 		<Box>
 			<Box fontSize={20} fontWeight="bold" mb={3}>
 				Mission status
 			</Box>
 			<Stack direction="column" spacing={2}>
-				{tasksData?.data.map((item: TaskItem, index: numer) => {
+				{tasksData?.data.map((item: TaskItem, index: number) => {
 					return (
-						<Card sx={{ minWidth: 275 }}>
+						<React.Fragment key={index}>
+						<Card  sx={{ minWidth: 275 }}>
 							<CardActionArea>
 								<Box p={1.5} display="flex">
 									<Box width={48} height={48} mr={2}>
@@ -84,6 +85,7 @@ const Mission = () => {
 								</Box>
 							</CardActionArea>
 						</Card>
+						</React.Fragment>
 					);
 				})}
 			</Stack>

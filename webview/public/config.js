@@ -1,7 +1,7 @@
 /** @format */
 
 window.Config = {
-	ENV: 'local',
-	HOST: 'https://www.beta.metasens.io',
+	ENV: 'production',
+	HOST: 'https://app-cplk6yhpaq-de.a.run.app',
 	API_HOST: 'https://app-cplk6yhpaq-de.a.run.app',
 };
