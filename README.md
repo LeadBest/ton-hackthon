@@ -2,6 +2,8 @@
 
 [![Github](https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/LeadBest/ton-hackthon/tree/master)
 
+[<img src="https://icodrops.com/wp-content/uploads/2022/05/vQ_AAwon_400x400.jpg" width=100>](https://dorahacks.io/buidl/4315)
+
 # Leadbest Consulting Group - TON Dooby
 
 "Dooby has no master! Dooby is a free elf, and Dooby has come to save Harry Potter and his friends!"
