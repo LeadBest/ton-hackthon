@@ -1,8 +1,17 @@
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40TonDobby)](https://twitter.com/TonDooby)
+
+[![Github](https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/LeadBest/ton-hackthon/tree/master)
+
 # Leadbest Consulting Group - TON Dooby
 
 "Dooby has no master! Dooby is a free elf, and Dooby has come to save Harry Potter and his friends!"
 
 <img src="https://drive.google.com/uc?export=download&id=1MrXKzXaecjjrSJ5MiQ9W1JWPqLP3FNJi" width="300">
+
+## Demo Video
+
+[<img src="https://drive.google.com/uc?export=download&id=1-tzmU_EYwAkAfVqicDbroKJDLfI-b0EW" width="300">](https://drive.google.com/file/d/1F-4XFDROHhUH6lD_dkWlBl09LN9OVWNh/view)
+
 
 ## Idea
 
@@ -75,5 +84,3 @@ npm run start
 ## Reference
 
 [Demo Slide](https://pse.is/4ptg7e)
-
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40TonDobby)](https://twitter.com/TonDooby)
