@@ -1,8 +1,4 @@
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40TonDobby)](https://twitter.com/TonDooby)
-
-[![Github](https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/LeadBest/ton-hackthon/tree/master)
-
-[<img src="https://icodrops.com/wp-content/uploads/2022/05/vQ_AAwon_400x400.jpg" width=100>](https://dorahacks.io/buidl/4315)
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40TonDobby)](https://twitter.com/TonDooby) [![Github](https://img.shields.io/badge/github-%23181717.svg?&style=for-the-badge&logo=github&logoColor=white)](https://github.com/LeadBest/ton-hackthon/tree/master) [<img src="https://icodrops.com/wp-content/uploads/2022/05/vQ_AAwon_400x400.jpg" width=100>](https://dorahacks.io/buidl/4315) [<img src="https://media.microfusion.cloud/wp-content/uploads/2020/05/LCG-logo-2_72dpi.png" width=150>](https://www.leadbestconsultant.com/)
 
 # Leadbest Consulting Group - TON Dooby
 
